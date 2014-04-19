@@ -4,7 +4,7 @@ WORK_TIME_INTERVAL = 1000 * 60 * 25
 
 
 import wx
-import win32con
+
 import datetime
 import os
 
@@ -160,7 +160,7 @@ class MyFrame(wx.Frame):
         self.ShowStatusUpdateDialog()
     def regHotKey(self):
         self.hotKeyId = 100
-        self.RegisterHotKey(self.hotKeyId, win32con.MOD_ALT, win32con.VK_F5)
+
     def ShowStatusUpdateDialog(self):
         self.info_timer.Stop()
         dialog = wx.TextEntryDialog(None, "Status update", "text entry", config.get_last_log_line_for_today(), style=wx.OK|wx.CANCEL)
